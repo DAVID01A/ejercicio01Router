@@ -1,0 +1,17 @@
+<h1>Inicio</h1>
+<table>
+    <tr>
+      <td>id</td>
+      <td>imagen</td>
+      <td>descripcion</td>
+      <td></td>
+    </tr>
+    @for (elemto of muebles; track $index) {
+        <tr>
+          <td>{{elemto.id}}</td>
+          <td><img [src]="elemto.imagen" alt="Imagen" width="100"></td>
+          <td>{{elemto.descripcion}}</td>
+          <td><button [routerLink]="['/detalle',elemto.id]">Descripción</button></td>
+        </tr>
+    }
+</table>
